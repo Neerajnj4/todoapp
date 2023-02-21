@@ -1,0 +1,68 @@
+% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+  </head>
+  <body>
+  <center>
+    <div class="box">
+      <form method="POST" action="">
+        {% csrf_token %}
+        <h1>Signup</h1>
+        <input
+          type="text"
+          name="username"
+          class="username"
+          id="username"
+          placeholder="Enter username"
+          required
+        /><br />
+        <input
+          type="text"
+          name="email"
+          class="email"
+          id="email"
+          placeholder="Enter email"
+          required
+        /><br />
+        <input
+          type="text"
+          name="pass1"
+          class="pass1"
+          id="pass1"
+          placeholder="Enter password"
+          required
+        /><br />
+        <input
+          type="text"
+          name="pass2"
+          class="pass2"
+          id="pass2"
+          placeholder="Confirm password"
+          required
+        /><br />
+        <div class="signup">
+        <button>Signup</button>
+        </div>
+      </form>
+      <p>
+        Already have an account?
+        <a href="{% url 'signin' %}">Login</a>
+      </p>
+      <hr>
+      <div class="fb">
+        <a href=""><button>Login with Facebook</button></a>
+      </div>
+      <div class="google">
+        <a href=""><button>Login with Google</button></a>
+      </div>
+    </div>
+    </div>
+  </center>
+  </body>
+</html>

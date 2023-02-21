@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskDetail</title>
+</head>
+<body>
+
+    <div class="box_details">
+        {% csrf_token %}
+        <p> <b>Title</b>:{{tasks.title}}</p>
+        <p><b>Description</b>:{{tasks.description}}</p>
+        <p><b>Create on</b>:{{tasks.created}}</p>
+        <p><b>Completion status</b>:{{tasks.complete}}</p>
+        <a href="{% url 'items' %}"><button>go back</button></a>
+    </div>
+
+</body>
+</html>

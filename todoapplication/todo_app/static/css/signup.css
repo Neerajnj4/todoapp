@@ -1,0 +1,12 @@
+body{ padding:0;
+      margin:0;
+      background-image:url("../static/images/signup.jpg");
+      background-color:yellow;
+       }
+.box{
+    background-color:white;
+        width:300px;
+        transform:translate(0%,40%);}
+.box input{margin:5px;}
+.signup{margin:5px;}
+.fb{margin:5px;}
